@@ -7,7 +7,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import android.view.View;
 import android.widget.Button;
+import android.widget.QuickContactBadge;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -36,6 +39,23 @@ public class MainActivity extends AppCompatActivity {
         tvName.setText(user.name);
         tvDescription.setText(user.description);
         btnFollow.setText("Follow");
+
+        btnFollow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                if (user.followed) {
+                    btnFollow.setText("Follow");
+                    user.followed = false;
+                } else {
+                    btnFollow.setText("Unfollow");
+                    user.followed = true;
+                }
+            }
+
+
+        });
+
     }
+
 }
 
