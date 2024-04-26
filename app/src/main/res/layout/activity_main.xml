@@ -8,8 +8,10 @@
     >
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:background="@color/holo_purple"
         android:paddingLeft="100dp"
         android:paddingTop="10dp"
@@ -27,29 +29,31 @@
         />
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="128dp"
         android:layout_height="128dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="50dp"
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <ImageView
         android:layout_width="128dp"
         android:layout_height="128dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="50dp"
         android:src="@drawable/ic_launcher_foreground"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="276dp"
+        android:layout_marginTop="8dp"
         android:paddingLeft="50dp"
         android:paddingTop="10dp"
         android:paddingRight="50dp"
@@ -58,9 +62,46 @@
         android:textAlignment="center"
         android:textSize="14dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Hello World!"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="20mm"
+        android:layout_height="8mm"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:textSize="16dp"
+        android:text="FOLLOW"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="20mm"
+        android:layout_height="8mm"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:textSize="16dp"
+        android:text="MESSAGE"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

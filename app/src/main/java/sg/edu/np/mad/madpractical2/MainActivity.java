@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,12 +25,17 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Initialize a new User object
-//        User user = new(name:"John Doe", description:"MAD Developer", id:1, followed:false);
+        User user = new User("John Doe","MAD Developer", 1, false);
+
+        // Get the TextViews and Button from the layout
+        TextView tvName = findViewById(R.id.textView);
+        TextView tvDescription = findViewById(R.id.textView2);
+        Button btnFollow = findViewById(R.id.button);
 
 //        // Get the TextViews with the User's name, description and default button message
-//        tvName.setText(user.name);
-//        tvDescription.setText(user.description);
-//        btnFollow.setText("Follow");
+        tvName.setText(user.name);
+        tvDescription.setText(user.description);
+        btnFollow.setText("Follow");
     }
 }
 
